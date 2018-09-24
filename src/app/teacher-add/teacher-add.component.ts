@@ -10,7 +10,7 @@ export class TeacherAddComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log("hi")
+    console.log('hi');
   }
 
 }

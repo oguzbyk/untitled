@@ -10,11 +10,7 @@ export class AppComponent implements OnInit{
   constructor(private router: Router) {}
 
   title = 'untitled';
-  btnClickAddTeacher(){
-      this.router.navigate(
-        ['app-teacher-add'
-        ]);
-  }
+
   btnClickListTeacher() {
     this.router.navigate(['/app-teacher-list']);
 
