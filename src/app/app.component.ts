@@ -6,15 +6,10 @@ import {Router} from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   constructor(private router: Router) {}
 
   title = 'untitled';
-
-  btnClickListTeacher() {
-    this.router.navigate(['/app-teacher-list']);
-
-  }
 
   ngOnInit(): void {
   }

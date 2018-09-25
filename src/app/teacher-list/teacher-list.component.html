@@ -1,13 +1,33 @@
-
 <div style="text-align:center">
   <h1>
-    Welcome to Ogretmen Listesi
+    Ogretmen Listesine Hoşgeldiniz.
   </h1>
 </div>
-
-
 
 
 <p>
   teacher-list works!
 </p>
+
+
+<table >
+  <tr>
+    <th>Ogretmen Idsi</th>
+    <th>Ogretmen Ismi</th>
+    <th>Ogretmen Bransi</th>
+  </tr>
+  <tr *ngFor="let teacher of teachers">
+    <th>{{teacher.id}}</th>
+    <th>{{teacher.name}}</th>
+    <th>{{teacher.branch}}</th>
+  </tr>
+</table>
+<p>
+<button class="log_but" class="btn btn-primary-outline pull-right" value="AddTeacher" id="addTeacher"
+        (click)="btnClickAddTeacher()">Öğretmen Ekle
+</button>
+
+  <button class="log_but" class="btn btn-primary-outline pull-right" value="RegisterTeacher" id="registerTeacher"
+          (click)="btnClickRegister()">Kayit ol
+  </button>
+

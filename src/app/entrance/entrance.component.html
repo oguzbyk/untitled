@@ -1,12 +1,28 @@
-<p>
-  entrance works!
-</p>
-<button class="log_but" class="btn btn-primary-outline pull-right" value="ListTeacher" id="listTeacher"
-        routerLink="/app-teacher-list">Öğretmen Listesi
-</button>
-<button class="log_but" class="btn btn-primary-outline pull-right" value="AddTeacher" id="addTeacher"
-        (click)="btnClickAddTeacher()">Öğretmen Ekle
-</button>
+<header>
+  <p>
+    entrance works!
+  </p>
+  <!--<button class="log_but" class="btn btn-primary-outline pull-right" value="ListTeacher" id="listTeacher"-->
+  <!--routerLink="/app-teacher-list">Öğretmen Listesi-->
+  <!--</button>-->
+  <button class="log_but" class="btn btn-primary-outline pull-right" value="Register" id="register"
+          (click)="btnClickRegister()">Sisteme Kayit Ol
+  </button>
+  <button class="log_but" class="btn btn-primary-outline pull-right" value="ListTeacher" id="listTeacher"
+          (click)="btnClickListTeacher()">Öğretmen Listesi
+  </button>
+  <button class="log_but" class="btn btn-primary-outline pull-right" value="AddTeacher" id="addTeacher"
+          (click)="btnClickAddTeacher()">Öğretmen Ekle
+  </button>
+
+  <div *ngFor="let teacher of teachers">
+    {{teacher.id}}
+  </div>
 
 
-{{teachers}}
+  <div *ngFor="let teacher of (teachersObs | async)">
+    {{teacher.name}}
+  </div>
+
+  <button (click)="changeTeacherId(0)">Change Id</button>
+</header>
