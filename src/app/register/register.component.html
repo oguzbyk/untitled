@@ -35,3 +35,9 @@
         <a [routerLink]="['/login']" class="btn btn-link">Cancel</a>
     </div>
 </form>
+
+<span *ngIf="savedRegister">{{savedRegister.firstName}}</span>
+<tr *ngFor="let register of registers">
+  <th>{{register.firstName}}</th>
+  <th>{{register.lastName}}</th>
+</tr>

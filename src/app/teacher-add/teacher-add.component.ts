@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-teacher-add',
@@ -6,11 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./teacher-add.component.css']
 })
 export class TeacherAddComponent implements OnInit {
+  addTeacherForm: FormGroup;
+  loading = false;
+  submitted = false;
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder,
+  ) {
+  }
 
   ngOnInit() {
-    console.log('hi');
+    this.addTeacherForm = this.formBuilder.group({
+      id: ['', Validators.required],
+      name: ['', Validators.required],
+      branch: ['', Validators.required],
+    });
   }
 
 }
