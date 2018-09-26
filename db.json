@@ -4,19 +4,57 @@
       "id": 1,
       "name": "asd",
       "sname": "kaplan",
-      "branch": "kimya"
+      "branch": "kimya",
+      "mainClass": "9-A"
     },
     {
       "id": 2,
       "name": "nesrin",
       "sname": "kaplan",
-      "branch": "bilgisayar"
+      "branch": "bilgisayar",
+      "mainClass": "12-C"
     },
     {
       "id": "3",
       "name": "oguz",
       "sname": "bıyık",
-      "branch": "bilgisayar"
+      "branch": "bilgisayar",
+      "mainClass": "10-B"
+    },
+    {
+      "id": "4",
+      "name": "sınıf",
+      "sname": "testi",
+      "branch": "kimya",
+      "mainClass": "10-C"
+    },
+    {
+      "id": "5",
+      "name": "ercan",
+      "sname": "bilinmiyo",
+      "branch": "spor",
+      "mainClass": "10-C"
+    },
+    {
+      "id": "6",
+      "name": "te",
+      "sname": "te",
+      "branch": "matematik",
+      "mainClass": "11-A"
+    },
+    {
+      "id": "8",
+      "name": "qwe",
+      "sname": "ewq",
+      "branch": "matematik",
+      "mainClass": "11-B"
+    },
+    {
+      "id": "9",
+      "name": "nsrn",
+      "sname": "kpln",
+      "branch": "bilgisayar",
+      "mainClass": "9-E"
     }
   ],
   "users": [
@@ -25,7 +63,7 @@
       "lastName": "byk",
       "username": "byk",
       "password": "bykbyk",
-	  "permission": "manager",
+      "permission": "manager",
       "id": 1
     },
     {
@@ -33,7 +71,7 @@
       "lastName": "byk",
       "username": "byk",
       "password": "bykbyk",
-	  "permission": "assist_manager",
+      "permission": "assist_manager",
       "id": 2
     },
     {
@@ -41,7 +79,7 @@
       "lastName": "babalık",
       "username": "pinar",
       "password": "babalık",
-	  "permission": "teacher",
+      "permission": "teacher",
       "id": 3
     },
     {
@@ -49,8 +87,22 @@
       "lastName": "t1",
       "username": "t2",
       "password": "t34433434",
-	  "permission": "manager",
+      "permission": "manager",
       "id": 4
+    },
+    {
+      "firstName": "tes",
+      "lastName": "tes",
+      "username": "tes",
+      "password": "testststst",
+      "id": 5
+    },
+    {
+      "firstName": "nesrin",
+      "lastName": "kpln",
+      "username": "nsrn",
+      "password": "123456",
+      "id": 6
     }
   ]
 }

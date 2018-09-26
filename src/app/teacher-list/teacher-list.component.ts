@@ -13,14 +13,13 @@ export class TeacherListComponent implements OnInit {
   teachers: Teacher[];
   private URL = 'http://localhost:3000/teachers';
 
-  constructor(private router:  Router, private http: HttpClient) {
+  constructor(private router: Router, private http: HttpClient) {
+    this.getTeacherList();
+
   }
 
   ngOnInit() {
-    this.http.get(this.URL).subscribe((response: Teacher[]) => {
-      this.teachers = response;
-      return response;
-    });
+    this.getTeacherList();
   }
 
   btnClickAddTeacher() {
@@ -32,6 +31,13 @@ export class TeacherListComponent implements OnInit {
     console.log('oguz');
     this.router.navigate(['app-user-add']);
 
+  }
+
+  getTeacherList() {
+    this.http.get(this.URL).subscribe((response: Teacher[]) => {
+      this.teachers = response;
+      return response;
+    });
   }
 
 }

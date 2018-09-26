@@ -1,11 +1,11 @@
-<div class="panel panel-primary" style="width: 25%; margin-left: 5%">
+<div class="panel panel-primary" style="width: 40%; margin-left: 5%">
 
   <div style="text-align:center">
     <h1>
-      Ogretmen Ekleme
+      Öğretmen Ekleme
     </h1>
   </div>
-  <form [formGroup]="addTeacherForm" (ngSubmit)="onSubmit()">
+  <form style="width: 50% " [formGroup]="addTeacherForm" (ngSubmit)="onSubmit()">
     <div class="panel-body">
       <div class="form-group">
         <label>Id</label>
@@ -33,11 +33,23 @@
       </div>
       <div class="form-group">
         <label>Branşı</label>
-        <input type="text" formControlName="branch" class="form-control"
-               [ngClass]="{ 'is-invalid': submitted && f.branch.errors }"/>
-        <div *ngIf="submitted && !!f.branch.errors" class="invalid-feedback">
-          <div *ngIf="!!f.branch.errors.required">Last Name is required</div>
-        </div>
+        <select formControlName="branch" class="form-control" [(ngModel)]="selectedBranch">
+          <option *ngFor="let br of branches$"
+                  [value]="br.label"
+                  [attr.selected]="selectedMainClass==br.label ? true : null">
+            {{br.label}}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Sınıf Öğretmeni</label>
+        <select formControlName="mainClass" class="form-control" [(ngModel)]="selectedMainClass">
+          <option *ngFor="let title of mainClasses$"
+                  [value]="title.label"
+                  [attr.selected]="selectedMainClass==title.label ? true : null">
+            {{title.label}}
+          </option>
+        </select>
       </div>
 
       <div class="form-group">
@@ -45,7 +57,11 @@
         <img *ngIf="loading"
              src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>
         <a [routerLink]="['/app-teacher-list']" class="btn btn-link">İptal</a>
+
       </div>
+      <button [disabled]="loading" class="log_but"  class="btn btn-primary"
+              [routerLink]="['/app-entrance']">Ana Menü
+      </button>
     </div>
   </form>
 </div>

@@ -1,4 +1,4 @@
-<div class="panel panel-primary" style="width: 25%; margin-left: 5%">
+<div class="panel panel-primary" style="width: 40%; margin-left: 5%">
 
 <div style="text-align:center">
   <h1>
@@ -8,14 +8,18 @@
 
 <table >
   <tr>
-    <th>Ogretmen Idsi</th>
-    <th>Ogretmen Ismi</th>
-    <th>Ogretmen Bransi</th>
+    <th>Idsi</th>
+    <th>Ismi</th>
+    <th>Bransi</th>
+    <th>Sınıfı</th>
+
   </tr>
   <tr *ngFor="let teacher of teachers">
     <th>{{teacher.id}}</th>
     <th>{{teacher.name}}</th>
     <th>{{teacher.branch}}</th>
+    <th>{{teacher.mainClass}}</th>
+
   </tr>
 </table>
   <div class="buttonHolder">

@@ -17,6 +17,8 @@ const routes: Routes = [
   { path: 'app-teacher-add', component: TeacherAddComponent},
   { path: 'app-teacher-list', component: TeacherListComponent},
   { path: 'app-user-list', component: UserListComponent},
+  { path: 'app-entrance', component: EntranceComponent},
+
 
 ];
 
