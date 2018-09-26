@@ -1,28 +1,28 @@
-<header>
-  <p>
-    entrance works!
-  </p>
-  <!--<button class="log_but" class="btn btn-primary-outline pull-right" value="ListTeacher" id="listTeacher"-->
-  <!--routerLink="/app-teacher-list">Öğretmen Listesi-->
-  <!--</button>-->
-  <button class="log_but" class="btn btn-primary-outline pull-right" value="Register" id="register"
-          (click)="btnClickRegister()">Sisteme Kayit Ol
+<h2 class="panel panel-header" style="width: 25%; margin-left: 5%">Menü</h2>
+<div class="panel panel-primary" style="width: 25%; margin-left: 5%">
+
+<div class="buttonHolder" style="width: 25%; margin-left: 5%">
+  <button class="log_but" class="btn btn-primary" style="margin-top: 10px; width: 250px" value="Register" id="addUser"
+          (click)="btnClickAddUser()">Kullanıcı Kaydı
   </button>
-  <button class="log_but" class="btn btn-primary-outline pull-right" value="ListTeacher" id="listTeacher"
+  <p>
+  <button class="log_but" class="btn btn-primary" style="margin-top: 10px; width: 250px" value="Register" id="listUser"
+          (click)="btnClickListUser()">Kayitlı Kullanıcıları Gör
+  </button>
+  <p>
+  <button class="log_but" class="btn btn-primary" style="margin-top: 10px; width: 250px" value="ListTeacher" id="listTeacher"
           (click)="btnClickListTeacher()">Öğretmen Listesi
   </button>
-  <button class="log_but" class="btn btn-primary-outline pull-right" value="AddTeacher" id="addTeacher"
+  <p>
+  <button class="log_but" class="btn btn-primary" style="margin-top: 10px; width: 250px" value="AddTeacher" id="addTeacher"
           (click)="btnClickAddTeacher()">Öğretmen Ekle
   </button>
+  <p>
+</div>
 
-  <div *ngFor="let teacher of teachers">
-    {{teacher.id}}
-  </div>
+  <!--<div *ngFor="let teacher of (teachersObs | async)">-->
+    <!--{{teacher.name}}-->
+  <!--</div>-->
 
-
-  <div *ngFor="let teacher of (teachersObs | async)">
-    {{teacher.name}}
-  </div>
-
-  <button (click)="changeTeacherId(0)">Change Id</button>
-</header>
+  <!--<button (click)="changeTeacherId(0)">Change Id</button>-->
+</div>

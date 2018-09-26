@@ -1,0 +1,43 @@
+<div class="panel panel-primary" style="width: 40%; margin-left: 5%; margin-bottom: 5%">
+
+<div style="text-align:left">
+  <h1>
+    Kayıtlı Kullanıcılar Listesi
+  </h1>
+</div>
+
+<table class="table table-primary" style="width: auto; margin-left: 5%; margin-bottom: 5%" >
+  <tr>
+    <th>Id</th>
+    <th>Adı</th>
+    <th>Soyadı</th>
+    <th>Sistem Adı</th>
+    <th>Şifre</th>
+    <th>Yetki</th>
+
+
+  </tr>
+  <tr *ngFor="let user of users">
+    <th>{{user.id}}</th>
+    <th>{{user.firstName}}</th>
+    <th>{{user.lastName}}</th>
+    <th>{{user.username}}</th>
+    <th>{{user.password}}</th>
+    <th>{{user.permission}}</th>
+    <!--<th>-->
+      <!--<input type="checkbox" ng-model='Selected' ng-click="checkBox({{user.id}})" >-->
+    <!--https://stackoverflow.com/questions/22527655/delete-multiple-ng-repeat-elements-on-click-of-a-single-button-->
+    <!--</th>-->
+
+  </tr>
+</table>
+
+<button class="log_but" class="button button-primary" style="margin-bottom: 10px;" value="AddTeacher" id="addTeacher"
+        (click)="btnClickAddTeacher()">Öğretmen Ekle
+</button>
+
+  <button class="log_but" class="button button-primary" value="AddUser" id="addUser"
+          (click)="btnClickUser()">Kullanıcı Ekle
+  </button>
+
+</div>

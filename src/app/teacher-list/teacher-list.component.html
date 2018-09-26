@@ -1,14 +1,10 @@
+<div class="panel panel-primary" style="width: 25%; margin-left: 5%">
+
 <div style="text-align:center">
   <h1>
-    Ogretmen Listesine Hoşgeldiniz.
+   Öğretmen Listesi
   </h1>
 </div>
-
-
-<p>
-  teacher-list works!
-</p>
-
 
 <table >
   <tr>
@@ -22,12 +18,15 @@
     <th>{{teacher.branch}}</th>
   </tr>
 </table>
-<p>
-<button class="log_but" class="btn btn-primary-outline pull-right" value="AddTeacher" id="addTeacher"
+  <div class="buttonHolder">
+
+  <button class="log_but" class="btn btn-primary" value="AddTeacher" id="addTeacher"
         (click)="btnClickAddTeacher()">Öğretmen Ekle
 </button>
-
-  <button class="log_but" class="btn btn-primary-outline pull-right" value="RegisterTeacher" id="registerTeacher"
+  </div>
+  <div class="buttonHolder">
+  <button class="log_but" class="btn btn-primary" value="RegisterTeacher" id="registerTeacher"
           (click)="btnClickRegister()">Kayit ol
   </button>
-
+  </div>
+</div>

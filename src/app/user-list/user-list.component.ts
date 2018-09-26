@@ -2,23 +2,24 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {Teacher} from '../model/teacher.model';
 import {HttpClient} from '@angular/common/http';
+import {User} from '../model/user.model';
 
 @Component({
-  selector: 'app-teacher-list',
-  templateUrl: './teacher-list.component.html',
-  styleUrls: ['./teacher-list.component.css']
+  selector: 'app-user-list',
+  templateUrl: './user-list.component.html',
+  styleUrls: ['./user-list.component.css']
 })
-export class TeacherListComponent implements OnInit {
+export class UserListComponent implements OnInit {
 
-  teachers: Teacher[];
-  private URL = 'http://localhost:3000/teachers';
+  users: User[];
+  private URL = 'http://localhost:3000/users';
 
   constructor(private router:  Router, private http: HttpClient) {
   }
 
   ngOnInit() {
-    this.http.get(this.URL).subscribe((response: Teacher[]) => {
-      this.teachers = response;
+    this.http.get(this.URL).subscribe((response: User[]) => {
+      this.users = response;
       return response;
     });
   }
@@ -28,7 +29,7 @@ export class TeacherListComponent implements OnInit {
       ['app-teacher-add']);
   }
 
-  btnClickRegister() {
+  btnClickUser() {
     console.log('oguz');
     this.router.navigate(['app-user-add']);
 
