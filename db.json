@@ -1,0 +1,56 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "name": "asd",
+      "sname": "kaplan",
+      "branch": "kimya"
+    },
+    {
+      "id": 2,
+      "name": "nesrin",
+      "sname": "kaplan",
+      "branch": "bilgisayar"
+    },
+    {
+      "id": "3",
+      "name": "oguz",
+      "sname": "bıyık",
+      "branch": "bilgisayar"
+    }
+  ],
+  "users": [
+    {
+      "firstName": "oguz",
+      "lastName": "byk",
+      "username": "byk",
+      "password": "bykbyk",
+	  "permission": "manager",
+      "id": 1
+    },
+    {
+      "firstName": "byk",
+      "lastName": "byk",
+      "username": "byk",
+      "password": "bykbyk",
+	  "permission": "assist_manager",
+      "id": 2
+    },
+    {
+      "firstName": "pinar",
+      "lastName": "babalık",
+      "username": "pinar",
+      "password": "babalık",
+	  "permission": "teacher",
+      "id": 3
+    },
+    {
+      "firstName": "test",
+      "lastName": "t1",
+      "username": "t2",
+      "password": "t34433434",
+	  "permission": "manager",
+      "id": 4
+    }
+  ]
+}
