@@ -4,6 +4,8 @@ import {HttpClient} from '@angular/common/http';
 import {Branch, ClassOptions, Teacher} from '../model/teacher.model';
 import {Router} from '@angular/router';
 import {SelectItem} from '../model/selectitem';
+import {async} from 'rxjs/internal/scheduler/async';
+
 
 @Component({
   selector: 'app-teacher-add',
@@ -42,19 +44,29 @@ export class TeacherAddComponent implements OnInit {
     });
   }
 
+  getTeacherById(id: String) {
+     return this.http.get(this.URL + '/' + id);
+  }
+
   onSubmit() {
     this.submitted = true;
     if (this.addTeacherForm.invalid) {
       return;
     }
-    this.loading = true;
-    this.http.post(this.URL, this.addTeacherForm.value)
-      .subscribe((response: Teacher) => {
-        console.log('successful');
-        console.log(response.name);
-      });
-    this.loading = false;
-    this.router.navigate(['app-teacher-list']);
+    this.getTeacherById(this.addTeacherForm.get('id').value).subscribe((teacher: Teacher) => {
+      if(teacher) {
+        alert('Tanimli Ogretmen Var!!')
+      }
+    },error1 => {
+      this.loading = true;
+      this.http.post(this.URL, this.addTeacherForm.value)
+        .subscribe((response: Teacher) => {
+          console.log('successful');
+          console.log(response.name);
+          this.loading = false;
+          this.router.navigate(['app-teacher-list']);
+        });
+    });
 
   }
 

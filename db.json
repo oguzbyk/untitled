@@ -1,60 +1,11 @@
 {
   "teachers": [
     {
-      "id": 1,
-      "name": "asd",
-      "sname": "kaplan",
-      "branch": "kimya",
-      "mainClass": "9-A"
-    },
-    {
-      "id": 2,
-      "name": "nesrin",
-      "sname": "kaplan",
-      "branch": "bilgisayar",
-      "mainClass": "12-C"
-    },
-    {
-      "id": "3",
-      "name": "oguz",
+      "id": "1",
+      "name": "ogyz",
       "sname": "bıyık",
       "branch": "bilgisayar",
-      "mainClass": "10-B"
-    },
-    {
-      "id": "4",
-      "name": "sınıf",
-      "sname": "testi",
-      "branch": "kimya",
-      "mainClass": "10-C"
-    },
-    {
-      "id": "5",
-      "name": "ercan",
-      "sname": "bilinmiyo",
-      "branch": "spor",
-      "mainClass": "10-C"
-    },
-    {
-      "id": "6",
-      "name": "te",
-      "sname": "te",
-      "branch": "matematik",
-      "mainClass": "11-A"
-    },
-    {
-      "id": "8",
-      "name": "qwe",
-      "sname": "ewq",
-      "branch": "matematik",
-      "mainClass": "11-B"
-    },
-    {
-      "id": "9",
-      "name": "nsrn",
-      "sname": "kpln",
-      "branch": "bilgisayar",
-      "mainClass": "9-E"
+      "mainClass": "10-A"
     }
   ],
   "users": [
@@ -103,6 +54,29 @@
       "username": "nsrn",
       "password": "123456",
       "id": 6
+    },
+    {
+      "firstName": "gurkan",
+      "lastName": "illeez",
+      "username": "gi",
+      "password": "123456",
+      "id": 7
+    },
+    {
+      "firstName": "ob",
+      "lastName": "bo",
+      "username": "obob",
+      "password": "obobobob",
+      "permission": "teacher",
+      "id": 8
+    },
+    {
+      "firstName": "ert",
+      "lastName": "tre",
+      "username": "ertert",
+      "password": "ertert",
+      "permission": "manager",
+      "id": 9
     }
   ]
 }

@@ -65,7 +65,7 @@ export class EntranceComponent implements OnInit {
 
   btnClickListUser() {
     console.log('oguz');
-    this.router.navigate(['app-add-list']);
+    this.router.navigate(['app-user-list']);
 
   }
 

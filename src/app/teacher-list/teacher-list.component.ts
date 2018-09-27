@@ -40,4 +40,17 @@ export class TeacherListComponent implements OnInit {
     });
   }
 
+  removeSelected(id: number) {
+    if (window.confirm('Bu öğretmen kaydını silmek istiyor musunuz ?')) {
+      console.log(id);
+      this.http.delete(this.URL + '/' + id).subscribe(result => {
+        console.log(result);
+        this.teachers = this.teachers.filter((elem) => {
+          return elem.id !== id;
+        });
+      }, error => console.log('Bir hata olustu: ', error));
+      this.getTeacherList();
+    }
+  }
+
 }

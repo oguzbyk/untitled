@@ -1,5 +1,5 @@
 export enum Permission {
-  manager, assist_manager, teacher
+  manager = 'manager', assist_manager = 'assist_manager', teacher= 'teacher'
 }
 
 export interface User {

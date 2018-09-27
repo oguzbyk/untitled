@@ -1,11 +1,11 @@
-<div class="panel panel-primary" style="width: 40%; margin-left: 5%">
+<div class="panel panel-primary" style="width: 40%;min-width: 500px; min-height: 750px; margin-left: 5%">
 
   <div style="text-align:center">
     <h1>
       Öğretmen Ekleme
     </h1>
   </div>
-  <form style="width: 50% " [formGroup]="addTeacherForm" (ngSubmit)="onSubmit()">
+  <form style="width: 50%;min-width: 300px; max-width: 400px;" [formGroup]="addTeacherForm" (ngSubmit)="onSubmit()">
     <div class="panel-body">
       <div class="form-group">
         <label>Id</label>

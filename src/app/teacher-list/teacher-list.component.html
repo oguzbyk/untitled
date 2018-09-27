@@ -1,4 +1,4 @@
-<div class="panel panel-primary" style="width: 40%; margin-left: 5%">
+<div class="panel panel-primary" style="width: 40%;min-width: 500px; min-height: 750px; margin-left: 5%">
 
 <div style="text-align:center">
   <h1>
@@ -9,17 +9,19 @@
 <table >
   <tr>
     <th>Idsi</th>
-    <th>Ismi</th>
+    <th>Adı</th>
+    <th>Soyadı</th>
     <th>Bransi</th>
     <th>Sınıfı</th>
-
+    <th>İşlemler</th>
   </tr>
   <tr *ngFor="let teacher of teachers">
     <th>{{teacher.id}}</th>
     <th>{{teacher.name}}</th>
+    <th>{{teacher.sname}}</th>
     <th>{{teacher.branch}}</th>
     <th>{{teacher.mainClass}}</th>
-
+  <th><button (click)="removeSelected(teacher.id.toString())" value="Delete">Delete</button><br></th>
   </tr>
 </table>
   <div class="buttonHolder">
