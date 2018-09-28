@@ -22,7 +22,14 @@
     <th>{{user.firstName}}</th>
     <th>{{user.lastName}}</th>
     <th>{{user.username}}</th>
-    <th>{{user.password}}</th>
+    <!--<th><input disabled="true" ng-attr-type="{{ showPassword ? 'text' : 'password' }} type="password" value={{user.password}}}/></th>-->
+    <th>
+      <input value={{user.password}} type="{{showPassword?'text':'password'}}" />
+      <!--<div ng-click="toggleShowPassword()" ng-class="{'fa fa-eye': showPassword,'fa fa-eye-slash': !showPassword}" style="cursor: pointer;"></div>-->
+      <input  type="checkbox" title="Show Password" ng-model="toggleShowPassword()" ng-checked="toggleShowPassword()">
+
+
+    </th>
     <th>{{user.permission}}</th>
     <!--<th>-->
       <!--<input type="checkbox" ng-model='Selected' ng-click="checkBox({{user.id}})" >-->

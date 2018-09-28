@@ -1,11 +1,11 @@
 {
   "teachers": [
     {
-      "id": "1",
-      "name": "ogyz",
-      "sname": "bıyık",
-      "branch": "bilgisayar",
-      "mainClass": "10-A"
+      "id": "123",
+      "name": "pinar",
+      "sname": "babalık",
+      "branch": "spor",
+      "mainClass": "11-B"
     }
   ],
   "users": [
@@ -77,6 +77,14 @@
       "password": "ertert",
       "permission": "manager",
       "id": 9
+    },
+    {
+      "firstName": "pinar",
+      "lastName": "babalık",
+      "username": "pb",
+      "password": "pb123123",
+      "permission": "manager",
+      "id": 10
     }
   ]
 }
