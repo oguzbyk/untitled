@@ -10,6 +10,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {UserComponent} from './user-add/user.component';
 import {UserListComponent} from './user-list/user-list.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ShowHidePasswordModule } from 'ngx-show-hide-password';
+import { TeacherSchedulerDetailsAddComponent } from './teacher-scheduler-details-add/teacher-scheduler-details-add.component';
 
 const routes: Routes = [
   { path: '', component: EntranceComponent},
@@ -30,13 +32,16 @@ const routes: Routes = [
     EntranceComponent,
     UserComponent,
     UserListComponent,
+    TeacherSchedulerDetailsAddComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ShowHidePasswordModule.forRoot(),
+
   ],
   providers: [],
   bootstrap: [AppComponent]
