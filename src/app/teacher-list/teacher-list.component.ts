@@ -15,7 +15,6 @@ export class TeacherListComponent implements OnInit {
 
   constructor(private router: Router, private http: HttpClient) {
     this.getTeacherList();
-
   }
 
   ngOnInit() {
@@ -30,7 +29,6 @@ export class TeacherListComponent implements OnInit {
   btnClickRegister() {
     console.log('oguz');
     this.router.navigate(['app-user-add']);
-
   }
 
   getTeacherList() {
@@ -52,5 +50,4 @@ export class TeacherListComponent implements OnInit {
       this.getTeacherList();
     }
   }
-
 }

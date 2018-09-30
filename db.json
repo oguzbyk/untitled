@@ -6,6 +6,13 @@
       "sname": "babalık",
       "branch": "spor",
       "mainClass": "11-B"
+    },
+    {
+      "id": "1",
+      "name": "oguz",
+      "sname": "bıyık",
+      "branch": "bilgisayar",
+      "mainClass": "10-A"
     }
   ],
   "users": [

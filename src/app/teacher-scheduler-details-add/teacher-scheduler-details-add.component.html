@@ -1,3 +1,69 @@
-<p>
-  teacher-scheduler-details-add works!
-</p>
+<select [(ngModel)]="selectedTeacher">
+  <option *ngFor="let teacher of teacherSelectionList$"
+          [value]="teacher.label"
+          [attr.selected]="selectedTeacher==teacher.label ? true : null">
+    {{teacher.label}}
+  </option>
+</select>
+
+<form *ngIf=selectedTeacher style="width: 50%;min-width: 300px; max-width: 400px;" [formGroup]="addTeacherSchedulerDetailsForm" (ngSubmit)="onSubmit()">
+  <div class="panel-body">
+    <div class="form-group">
+      hello {{selectedTeacher}}
+
+      <label>Id</label>
+      <input type="text" formControlName="id" class="form-control"
+             [ngClass]="{ 'is-invalid': submitted && f.id.errors }"/>
+      <div *ngIf="submitted && !!f.id.errors" class="invalid-feedback">
+        <div *ngIf="!!f.id.errors.required">Id alanı mecburidir.</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Adı</label>
+      <input type="text" formControlName="name" class="form-control"
+             [ngClass]="{ 'is-invalid': submitted && f.name.errors }"/>
+      <div *ngIf="submitted && !!f.name.errors" class="invalid-feedback">
+        <div *ngIf="!!f.name.errors.required">Adı alanı mecburidir.</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Soyadı</label>
+      <input type="text" formControlName="sname" class="form-control"
+             [ngClass]="{ 'is-invalid': submitted && f.sname.errors }"/>
+      <div *ngIf="submitted && !!f.sname.errors" class="invalid-feedback">
+        <div *ngIf="!!f.name.errors.required">Soyadı alanı mecburidir.</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Branşı</label>
+      <select formControlName="branch" class="form-control" [(ngModel)]="selectedBranch">
+        <option *ngFor="let br of branches$"
+                [value]="br.label"
+                [attr.selected]="selectedMainClass==br.label ? true : null">
+          {{br.label}}
+        </option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Sınıf Öğretmeni</label>
+      <select formControlName="mainClass" class="form-control" [(ngModel)]="selectedMainClass">
+        <option *ngFor="let title of mainClasses$"
+                [value]="title.label"
+                [attr.selected]="selectedMainClass==title.label ? true : null">
+          {{title.label}}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <button [disabled]="loading" class="btn btn-primary">Kayıt Et !</button>
+      <img *ngIf="loading"
+           src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA=="/>
+      <a [routerLink]="['/app-teacher-list']" class="btn btn-link">İptal</a>
+
+    </div>
+    <button [disabled]="loading" class="log_but" class="btn btn-primary"
+            [routerLink]="['/app-entrance']">Ana Menü
+    </button>
+  </div>
+</form>

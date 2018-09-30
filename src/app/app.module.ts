@@ -10,18 +10,17 @@ import {HttpClientModule} from '@angular/common/http';
 import {UserComponent} from './user-add/user.component';
 import {UserListComponent} from './user-list/user-list.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { ShowHidePasswordModule } from 'ngx-show-hide-password';
-import { TeacherSchedulerDetailsAddComponent } from './teacher-scheduler-details-add/teacher-scheduler-details-add.component';
+import {ShowHidePasswordModule} from 'ngx-show-hide-password';
+import {TeacherSchedulerDetailsAddComponent} from './teacher-scheduler-details-add/teacher-scheduler-details-add.component';
 
 const routes: Routes = [
-  { path: '', component: EntranceComponent},
-  { path: 'app-user-add', component: UserComponent},
-  { path: 'app-teacher-add', component: TeacherAddComponent},
-  { path: 'app-teacher-list', component: TeacherListComponent},
-  { path: 'app-user-list', component: UserListComponent},
-  { path: 'app-entrance', component: EntranceComponent},
-
-
+  {path: '', component: EntranceComponent},
+  {path: 'app-user-add', component: UserComponent},
+  {path: 'app-teacher-add', component: TeacherAddComponent},
+  {path: 'app-teacher-list', component: TeacherListComponent},
+  {path: 'app-user-list', component: UserListComponent},
+  {path: 'app-entrance', component: EntranceComponent},
+  {path: 'app-teacher-scheduler-details-add', component: TeacherSchedulerDetailsAddComponent}
 ];
 
 @NgModule({
@@ -46,4 +45,5 @@ const routes: Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
